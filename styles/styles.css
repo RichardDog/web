@@ -1,0 +1,691 @@
+/*text styles*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*--------------------------------------------------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*TTITLES*/
+h1{
+    font-size: 3.25rem; /*52px*/
+    font-family: Manrope;
+    font-weight: 800; /*Extra Bold*/
+    word-spacing: 0.313rem; /*5px*/
+}
+
+h2{
+    font-size: 3rem;/*48px*/
+    font-family: Manrope;
+    font-weight: 800; /*Extra Bold*/
+    word-spacing: 0.313rem;/*5px*/
+}
+
+h3{
+    font-size: 2.5rem;/*40px*/
+    font-family: Manrope;
+    font-weight: 700;/*Bold*/
+    word-spacing: 0.313rem;/*5px*/
+}
+
+h4{
+    font-size: 1.5rem;/*24px*/
+    font-family: Manrope;
+    font-weight: 700;/*Bold*/
+    word-spacing: 0.313rem;/*5px*/
+}
+
+.subtitle{
+    font-size: 1.125;/*18px*/
+    font-family: Manrope;
+    font-weight: 600;/*SemiBold*/
+    word-spacing: 0.313rem;/*5px*/
+    text-align: center;
+    color: #404040;
+}
+
+p{
+    font-size: 1rem; /*18px*/
+    font-family: Manrope;
+    font-weight: 400; /*Regular*/
+    word-spacing: 0.313rem; /*5px*/
+    line-height: 2rem;/*32px*/
+    text-align: justify;
+}
+
+/*----------------------------------NAVBAR---------------------------------*/
+.header{
+    background-color: #FDF7E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    padding: 5px 10%;
+}
+
+.header .logo{
+    cursor: pointer;
+}
+
+.header .logo img{
+    height: 71px;
+    width: auto;
+    margin: 10px;
+}
+
+.header .nav-links{
+    list-style: none;
+    display: flex;
+}
+
+.header .nav-links li{
+    position: relative; /* Agrega posición relativa para los elementos con submenú */
+}
+
+.header .nav-links a:hover {
+    background-color: rgba(8, 31, 60, 0.1);
+    border-radius: 6px;
+}
+
+.header .nav-links a{
+    font-size: 1rem;
+    font-family: Manrope;
+    font-weight: 600;
+    color: #081F3C;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+}
+
+.sub-sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #d1c5a9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    top: 0;
+    left: 100%; /* Posiciona el subsubmenú a la derecha del submenú */
+    list-style: none;
+    padding: 0px;
+    margin-left: 5px; /* Añade margen izquierdo para separar del submenú */
+}
+
+.sub-menu{
+    display: none;
+    position: absolute;
+    background-color: #eee5d1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    top: 100%;
+    left: 0;
+    list-style: none; /* Quitar viñetas del submenú */
+    padding: 0; /* Eliminar el espacio entre elementos del submenú */
+    width: 150px;
+}
+
+.has-submenu:hover > .sub-menu {
+    display: block;
+}
+
+.has-submenu:hover .has-submenu:hover > .sub-sub-menu {
+    display: block;
+}
+
+/*button*/
+
+.header .btnSF button{
+    font-size: 1rem;/*16px*/
+    font-family: Manrope;
+    font-weight: 800; /*ExtraBold*/
+    padding: 0.53em 1em;
+    margin: 15px 15px 15px 12rem;
+    background: transparent;
+    border: 3px solid #081F3C;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.header .btnCF button{
+    font-size: 1rem;/*16px*/
+    font-family: Manrope;
+    font-weight: 800; /*ExtraBold*/
+    color: white;
+    padding: 0.53em 1em;
+    background:  #081F3C;
+    border: 3px solid #081F3C;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/*----------------------------------HERO IMAGE---------------------------------*/
+
+:root{
+    --heroImg-index: url('../img/heroImg2.jpg');
+    --heroImg-testPrin: url('../img/heroExam.jpg');
+}
+
+.hero-image {
+    /*background-image: url('../img/heroImg2.jpg');*/
+    background-size: cover; /* Cubre todo el espacio disponible*/
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* 100% del alto de la ventana */
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la derecha */
+    align-items: center; /* Centra verticalmente */
+    padding-right: 20px; /* Espacio para separar el texto y el botón del borde derecho */
+}
+
+.heroImg-index{
+    background-image: var(--heroImg-index);
+}
+
+.hero-text {
+    text-align: left; /* Alinea el texto y el botón a la derecha */
+    color: rgb(0, 0, 0); /* Color del texto */
+    margin: 30px;
+    padding: 25px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem; /* 56px */
+    font-family: Montserrat;
+    font-weight: 400; /* Regular */
+    line-height: 5rem; /* 80px */
+    letter-spacing: -1.5%;
+    text-align: justify;
+    margin-bottom: 20px; /* Espacio entre el texto y el botón */
+    inline-size: 700px;
+    overflow-wrap: break-word;
+    margin-bottom: 30px;
+}
+
+:root {
+    --color-fondo-btn-azulD: #081F3C; /*Variable dark blue*/
+    
+    --color-fondo-btn-azulC: #2484FD; /*Variable azul claro*/
+
+    --color-fondo-btn-transparente: transparent;
+    --color-margin-btn-transparente: #081F3C;
+    --color-text-btn-transparente:#081F3C;
+}
+
+.btnPrin {
+    padding: 10px 15px; /* Tamaño del botón */
+    font-size: 1.125rem; /*18px*/
+    font-family: Manrope;
+    font-weight: 800; /*ExtraBold*/
+    color: white; /* Color del texto del botón */
+    text-decoration: none; /* Quitar subrayado del botón */
+    border-radius: 6px; /* Borde redondeado del botón */
+}
+
+.btnPrin-centrado {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+/*Uso de la variable azul claro*/
+.btnPrin-azulClaro {
+    background-color: var(--color-fondo-btn-azulC); 
+}
+
+.btnPrin-azulClaro:hover{
+    background-color: #277ce6;
+}
+
+/*Uso de la variable azul oscuro*/
+.btnPrin-azulDark {
+    background-color: var(--color-fondo-btn-azulD); /*Uso de la variable azul oscuro*/
+}
+
+.btnPrin-azulDark:hover{
+    background-color: #0c2544;
+}
+
+/*Uso de la variable transparent*/
+.btnPrin-transparent{
+    background-color: var(--color-fondo-btn-transparente);
+    box-shadow: 0 0 0 2px var(--color-margin-btn-transparente);
+    color: var(--color-text-btn-transparente);
+    margin-right: 50px
+}
+
+/*----------------------------------Index.html---------------------------------*/
+.imgContent img{
+    width: 550px;
+    height: auto;
+}
+
+.imgContent{
+    margin-right: 30px; /*Espacio entre la imagen y el texto*/
+    margin-left: 15px;
+}
+
+.infoContent{
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.textContent {
+    flex: 1; /* Ocupa todo el espacio disponible en la columna derecha */
+    padding: 25px;
+}
+
+/*----------------------------------FOOTER---------------------------------*/
+.footerContent{
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-text {
+    text-align: left; /* Alinea el texto y el botón a la derecha */
+    color: rgb(0, 0, 0); /* Color del texto */
+    margin: 10px;
+    padding: 5px;
+}
+
+.footer-text h2 {
+    letter-spacing: -1.5%;
+    margin-bottom: 20px; /* Espacio entre el texto y el botón */
+    inline-size: 700px;
+    overflow-wrap: break-word;
+    margin-bottom: 30px;
+}
+
+.btnPosition {
+    display: flex;
+    gap: 60px; /* Espacio entre los botones */
+}
+
+.footerInfo{
+    display: flex;
+    justify-content: end;
+    margin: 0 30px;
+    padding: 0 20px;
+}
+
+.columna{
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.footerInfo a{
+    text-decoration: none;
+    font-size: 0.938rem;/*15px*/
+    font-family: Montserrat;
+    font-weight: normal;
+    color: black;
+    line-height: 1.8em;
+}
+
+.footerInfo :hover{
+    color: #277ce6;
+}
+
+
+/*------------------------testVocacionalPrin.html--------------------------------*/
+/*hero image*/
+.heroImg-testPrin{
+    background-image: var(--heroImg-testPrin);
+}
+
+.descTest{
+    padding: 35px;
+    margin: 30px;
+
+}
+
+.titleTest{
+    text-align: center;
+    margin: 20px;
+}
+
+.infoVentajas {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ajusta la altura de los elementos para que se igualen */
+    padding: 15px 9%;
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+.colVentajas {
+    
+    flex: 1; /* Hace que los elementos tengan el mismo ancho */
+    margin:  15px; /* Espacio entre los elementos */
+    border: 2px solid;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden; /* Evita el desbordamiento */
+    text-align: center;
+    height: 450px;
+}
+
+
+.image-container {
+    height: 200px; /* Altura deseada para el contenedor de la imagen */
+    overflow: hidden; /* Evita el desbordamiento de la imagen */
+}
+
+.image-container img {
+    
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 200px; /* Se ajusta automáticamente la altura para mantener la proporción */
+    border-radius: 10px 10px 0 0; /* Redondea solo las esquinas superiores */
+    background-size: cover; /* La imagen se ajustará para cubrir completamente el contenedor */
+    background-position: center; /* La imagen se posicionará en el centro del contenedor */  
+}
+
+.colVentajas h4 {
+    margin: 10px;
+}
+
+
+.colVentajas p {
+    margin: 10px; /* Espacio alrededor del texto */
+    padding: 20px; /* Añade un relleno para separar las palabras del borde */
+}
+
+
+/*------------------------SobreNosotros.html--------------------------------*/
+.contInfo{
+    margin: 30px;
+    padding: 15px;
+}
+
+/*------------------------PolíticaCookies.html--------------------------------*/
+.titlePolitica{
+    color: #081F3C;
+    margin: 35px;
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+.subPolitica{
+    color: #353535;
+    margin: 0 55px;
+    font-size: 1.125;/*18px*/
+    font-family: Manrope;
+    font-weight: 600;/*SemiBold*/
+    word-spacing: 0.313rem;/*5px*/
+}
+
+table{
+    font-family: Manrope;
+}
+
+td{
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+}
+  
+th{
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 8px;
+    background-color: #0000002c;
+}
+
+/*------------------------login.html--------------------------------*/
+.cuerpo{
+    text-align: center;
+}
+
+.cuerpo input{
+    box-sizing: border-box;
+    margin: 25px;
+    width: 575px; /* Modificar el ancho según tu preferencia */
+    height: 60px; /* Modificar la altura según tu preferencia */
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-family: 'Manrope'; /* Mover el estilo de fuente aquí para todas las propiedades */
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.cuerpo input::placeholder {
+    text-align: left;
+    padding: 10px;
+}
+
+.footdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.olvidoCont{
+    font-size: 1.125;/*18px*/
+    font-family: Manrope;
+    font-weight: normal;
+    color: #353535;
+    line-height: 1.8em;
+}
+
+.regis{
+    text-decoration: none;
+    color: #081F3C;
+    font-weight: bold;
+}
+  
+.footdiv footer {
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------------------------Registro.html--------------------------------*/
+.cuerpo select {
+    box-sizing: border-box;
+    margin: 25px;
+    width: 590px;
+    height: 63px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#listDesp{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;   
+    color: #000000;
+    width: 575px; /* Modificar el ancho según tu preferencia */
+    height: 60px; /* Modificar la altura según tu preferencia */
+}   
+
+/*------------------------politicaPrivacidad.html--------------------------------*/
+ol{
+    margin: 0 30px 0 30px;
+    padding: 15px 0 0 15px;
+}
+
+li{
+    font-size: 1rem; /*18px*/
+    font-family: Manrope;
+    font-weight: 400; /*Regular*/
+    word-spacing: 0.313rem; /*5px*/
+    line-height: 2rem;/*32px*/
+    text-align: justify;
+}
+
+
+/*--------------------------------contacto.html------------------------------------*/
+
+.cuerpoContacto{
+    text-align: right;
+}
+
+.cuerpoContacto input, .cuerpoContacto textarea{
+    box-sizing: border-box;
+    margin-top: 50px; /* Agregar un margen superior de 50 píxeles */
+    margin-right: 100px; /* Agregar un margen derecho de 30 píxeles */
+    /*margin: 20px; */
+    width: 575px; /* Modificar el ancho según tu preferencia */
+    height: 60px; /* Modificar la altura según tu preferencia */
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-family: 'Manrope'; /* Mover el estilo de fuente aquí para todas las propiedades */
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.cuerpoContacto textarea {
+      margin-top: 25px;
+        height: 220px; /* Modificar la altura según tu preferencia */
+        padding: 20px;
+  }
+.cuerpoContacto form {
+    margin-top: 10px;
+}
+
+.text-contac {
+    width: 620px;
+    padding: 20px;
+    margin: 90px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    float: left;
+}
+
+.text-contac p {
+    font-weight: bold;
+    line-height: 1.5;
+}
+ 
+.footdivcontact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/*------------------------testVocacional.html--------------------------------*/
+.test-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #4caf50;
+    width: 0;
+}
+
+.question-container {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+:root {
+    --color-fondo-btn-meInteresa: #2ecc71; /*Variable verde*/    
+    --color-fondo-btn-noMeInteresa: #d10909; /*Variable rojo*/
+
+    --color-text-btn-meInteresa: #2ecc71;
+    --color-text-btn-noMeInteresa: #d10909;
+
+    --color-margin-btn-meInteresa: #2ecc71;
+    --color-margin-btn-noMeInteresa: #d10909;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-meInteresa,
+.btn-noMeInteresa {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: var(--color-fondo-btn-transparente);
+    font-size: 1rem;/*16px*/
+    font-family: Manrope;
+    font-weight: 800; /*ExtraBold*/
+}
+
+.btn-meInteresa{
+    background-color: var(--color-fondo-btn-transparente);
+    border: 2px solid var(--color-margin-btn-meInteresa);
+    color: var(--color-text-btn-meInteresa);
+}
+
+.btn-meInteresa:hover{
+    background-color: var(--color-fondo-btn-meInteresa);
+    color: white;
+}
+
+.btn-noMeInteresa{
+    background-color: var(--color-fondo-btn-transparente);
+    border: 2px solid var(--color-margin-btn-noMeInteresa);
+    color: var(--color-text-btn-noMeInteresa);
+}
+
+.btn-noMeInteresa:hover{
+    background-color: var(--color-fondo-btn-noMeInteresa);
+    color: white;
+}
+
+.submit{
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #0c2544;
+    font-size: 1rem;/*16px*/
+    font-family: Manrope;
+    font-weight: 800; /*ExtraBold*/
+}
